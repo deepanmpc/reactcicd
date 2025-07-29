@@ -1,0 +1,43 @@
+install in the react project
+-----------------------------
+
+npm install gh-pages --save-dev
+
+Add below lines in Package.json script
+--------------------------------------
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
+
+Complete below setups after creating cd.yml file in the remore repository 
+-------------------------------------------------------------------------
+step1
+-----
+Go to GitHub repo → Settings → Actions → General → Workflow permissions
+
+Read and write permissions is selected
+
+
+Step2
+-----
+Check if gh-pages branch was created
+Go to your repo → Branches → Confirm that the gh-pages branch exists and contains your built files (index.html, etc.).
+
+Step3: Configure GitHub Pages settings
+--------------------------------------
+
+Go to your repository on GitHub.
+
+Click on Settings (top right).
+
+In the left sidebar, click Pages.
+
+Under “Build and deployment”, choose:
+
+Source: Deploy from a branch
+
+Branch: gh-pages
+
+Folder: / (root)
+
+Click Save.
